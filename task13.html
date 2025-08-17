@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2D Objects on Canvas</title>
+</head>
+<body style="background-color: yellow; font-family: Arial, sans-serif; text-align: center;">
+    <h2 style="background-color: rgb(2, 111, 155); color: white; padding: 10px;"> 2D Shapes Using Canvas</h2>
+    <canvas id="myCanvas" width="600" height="400" style="border: 2px solid #000;"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "skyblue";
+        ctx.fillRect(50, 50, 100, 60);
+        ctx.beginPath();
+        ctx.arc(250, 80, 40, 0, 2 * Math.PI);
+        ctx.fillStyle = "coral";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(400, 50);
+        ctx.lineTo(500, 100);
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 4;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(150, 200);
+        ctx.lineTo(100, 300);
+        ctx.lineTo(200, 300);
+        ctx.closePath();
+        ctx.fillStyle = "gold";
+        ctx.fill();
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "black";
+        ctx.fillText("Canvas Demo", 230, 350);
+    </script>
+
+</body>
+</html>
